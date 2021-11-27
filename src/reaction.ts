@@ -1,10 +1,14 @@
 import express, { Request, Response } from "express";
 
-const port = 3002;
+const port = 8002;
 const app = express();
 
-app.get("/reaction", (req: Request, res: Response) => {
-  return res.send("response from izzys.work");
+app.use( express.json() );
+//app.use( express.urlencoded({ extended: true }) );
+
+app.post("/api/action", (req: Request, res: Response) => {
+  console.log( "req.body: ", req.body );
+  return res.status(201).send("SUCCESS");
 });
 
 app.listen( port, () => {
