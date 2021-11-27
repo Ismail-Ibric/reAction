@@ -21,8 +21,9 @@ jobs:
         id: api
         with:
           url: https://act.izzys.work/api/action
+          headers: '{ "Content-Type": "application/json" }'
           method: 'POST'
           accept: 201
-          body: '{"process":"rebuild","project":"ResumeProfile"}'
+          body: '{ "process": "rebuild", "project": "ResumeProfile" }'
       - name: 'Use response'
         run: echo ${{ steps.api.outputs.response }}
