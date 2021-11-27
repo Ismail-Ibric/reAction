@@ -23,6 +23,6 @@ jobs:
           url: https://act.izzys.work/api/action
           method: 'POST'
           accept: 201
-          body: 'process=rebuild&project=ResumeProfile'
+          body: '{"process":"rebuild","project":"ResumeProfile"}'
       - name: 'Use response'
         run: echo ${{ steps.api.outputs.response }}
