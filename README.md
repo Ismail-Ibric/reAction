@@ -14,4 +14,4 @@ Watches for GitHub Actions to rebuild a repo.
   - Express used to serve endpoints.
   - Spawning a process, waiting, reading output.
   - GitHub CLI called to clone a Repo, with a Private Key.
-  - ...
+  - Repo Build deployed into production site.
